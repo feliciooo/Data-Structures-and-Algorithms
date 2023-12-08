@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Rentura_HashMap {
+
+    public static void main(String[] args) {
+        
+        Map <String, String> programs = new HashMap <>();
+        
+        programs.put("BSIT", "Bachelor of Science in Information Technology");
+        programs.put("BSCS", "Bachelor of Science in Computer Science");
+        programs.put("BSIS", "Bachelor of Science in Information Systems");
+        
+        System.out.println("List of Programs: ");
+        for (Map.Entry e : programs.entrySet()){
+        
+            System.out.print(e.getKey() + " : " + e.getValue() + " ");
+        
+        }
+        
+        programs.remove("BSIT");
+        
+        System.out.println(programs.containsKey("BSCpE"));
+    }
+    
+}

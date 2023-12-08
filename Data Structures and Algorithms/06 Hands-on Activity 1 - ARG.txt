@@ -1,0 +1,42 @@
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Arrays;
+import java.util.ArrayList;
+
+public class MyArrays {
+
+    public static void main(String[] args) {
+        
+        Integer int_rar2 [] = {1, 2, 3, 4, 5};
+        
+        int arrLen = int_rar2.length;
+                
+        System.out.println("Array:" + int_rar2);
+        
+        ArrayList <Integer> rar2  = new ArrayList <Integer>(Arrays.asList(int_rar2));
+        
+        //int_rar2 [arrLen - 1] = 64;
+        
+        rar2.add(6);
+         
+         Iterator <Integer> listElement = null;
+        
+        listElement = rar2.listIterator();
+        
+        
+    }
+}
+
+class Array{
+
+ static void recur(Iterator <Integer> listElement){
+ 
+    while (listElement.hasNext()){
+
+    System.out.println(listElement.next());
+
+    recur (listElement);
+}
+}
+}

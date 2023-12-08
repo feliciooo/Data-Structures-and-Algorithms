@@ -1,0 +1,48 @@
+import java.util.*;
+
+public class BirthMonth {
+
+    public static void main(String[] args) {
+       
+        Scanner sc = new Scanner(System.in);
+        
+        
+        Set birthMonth1 = new HashSet();
+        Set birthMonth2 = new HashSet();
+        Set self = new HashSet();
+        for (int i = 1; i <= 3; i++){
+        
+        System.out.println("Enter birth month 1: ");
+        Collections.addAll(birthMonth1,sc.nextLine());
+        
+        }
+        
+        for (int i = 1; i <= 3; i++){
+        
+        System.out.println("Enter birth month 2: ");
+        Collections.addAll(birthMonth2,sc.nextLine());
+        
+        }
+        
+        System.out.println("Group 1: " + birthMonth1);
+        System.out.println("Group 2: " + birthMonth2);
+        
+        System.out.println("Enter your birthmonth: ");
+        Collections.addAll(self, sc.nextLine());
+        
+        Set union = new HashSet(birthMonth1);
+        Set inter = new HashSet(birthMonth1);
+        Set diff = new HashSet(birthMonth1);
+        
+        union.addAll(birthMonth2);
+        inter.retainAll(birthMonth2);
+        diff.removeAll(birthMonth2);
+        
+        System.out.println("Union: " + union);
+        System.out.println("Intersection: " + inter);
+        System.out.println("Difference: " + diff);
+        
+        System.out.println("You have the same birthmonth with one of your classmates.");
+    }
+    
+}

@@ -1,0 +1,42 @@
+import java.util.*;
+
+public class Rentura_Greeting {
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        PriorityQueue <String> printer = new PriorityQueue<>();
+        
+        int frends = 4;
+      
+        System.out.println("Enter the name of your 4 friends: ");
+        for(int i = 1; i <= frends; i++){
+        
+            
+            String friendNames = sc.nextLine();
+        
+            printer.add(friendNames);
+        }
+        System.out.println("Press H to say Hi to each of them: ");
+        
+        while (!printer.isEmpty()){
+    
+            String hiGreeting = sc.next().toUpperCase();
+    
+        if (hiGreeting.equals("H")){
+    
+            System.out.println("Hi " + printer.remove() );
+            
+        }else {
+     
+            System.out.println("Invalid input.");
+    
+    }
+        
+    } 
+        
+        System.out.println("Done saying Hi!");
+        
+    }
+    
+}
