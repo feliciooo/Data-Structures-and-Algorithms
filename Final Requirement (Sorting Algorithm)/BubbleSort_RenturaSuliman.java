@@ -78,3 +78,6 @@ public class BubbleSort_RenturaSuliman {
         }
     }
 }
+
+//Authors: Suliman, Jufel
+//         Rentura, John Lloyd 
