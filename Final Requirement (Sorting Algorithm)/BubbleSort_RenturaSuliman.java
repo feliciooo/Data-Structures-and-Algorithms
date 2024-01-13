@@ -35,8 +35,9 @@ public class BubbleSort_RenturaSuliman {
         String input = renSul.next();
         
         //This will check the user input if it's valid or not. If it's valid it will return the user input.
-        if (input.matches(".*\\d+.*")) {
-            System.out.println("Invalid input. Please enter a string without numerical values.");
+        String regex = "^(?=.*[a-zA-Z])[a-zA-Z0-9]*$";
+        if (!input.matches(regex) || input.length() < 3) {
+            System.out.println("Invalid input. Numeric input only is not allowed.");
             return getUserInput(renSul);
         }
         //Return the user's input if they're valid input
